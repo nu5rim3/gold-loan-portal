@@ -13,7 +13,7 @@ const Landing: React.FC = () => {
     navigate('/login')
   }
   return (
-    <>
+    <div className="bg-[url('/img/bg.svg')]">
       <Content className='flex flex-1 flex-col justify-center items-center h-screen'>
         <img src={Logo1} alt='digital-loan' style={{ width: 500 }} />
         <Title level={2} className="text-4xl font-bold mb-4">
@@ -32,7 +32,7 @@ const Landing: React.FC = () => {
           </Footer>
         </div>
       </Content>
-    </>
+    </div>
   );
 };
 
