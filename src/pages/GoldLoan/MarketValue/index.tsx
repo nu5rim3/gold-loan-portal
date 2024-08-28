@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MarketValue = () => {
+const MarketValue: React.FC = () => {
     return (
         <div>MarketValue</div>
     )

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const GoldSmith = () => {
+const GoldSmith: React.FC = () => {
     return (
         <div>GoldSmith</div>
     )

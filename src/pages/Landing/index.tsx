@@ -5,7 +5,7 @@ import Logo1 from '../../assets/LOGO1_BLACK.svg'
 
 const { Title, Text } = Typography;
 const { Footer, Content } = Layout;
-const Landing = () => {
+const Landing: React.FC = () => {
 
   const navigate = useNavigate();
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Roles = () => {
+const Roles: React.FC = () => {
     return (
         <div>Roles</div>
     )

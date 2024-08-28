@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MisReport = () => {
+const MisReport: React.FC = () => {
     return (
         <div>MisReport</div>
     )
