@@ -1,5 +1,5 @@
 // src/layouts/DashboardLayout.tsx
-import React, { ReactNode, useEffect, useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import { Layout, Menu } from 'antd';
 import { Link } from 'react-router-dom';
 import {
@@ -29,22 +29,15 @@ interface DashboardLayoutProps {
 
 const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
 
-    const [collapsed, setCollapsed] = useState(false);
+    const [collapsed, setCollapsed] = useState(true);
 
     const handleCollapse = (collapseState: boolean) => {
         setCollapsed(collapseState);
     };
 
-    useEffect(() => {
-        setTimeout(() => {
-            setCollapsed(true);
-        }, 10000);
-    }, [collapsed])
-
-
     return (
         <Layout style={{ minHeight: '100vh' }}>
-            <Sider collapsible collapsed={collapsed} onCollapse={handleCollapse} width={280}>
+            <Sider collapsible collapsed={collapsed} onCollapse={handleCollapse} width={280} onMouseOver={() => handleCollapse(false)} onMouseLeave={() => handleCollapse(true)}>
                 <div className="flex justify-center items-center py-2 font-bold text-xl">
                     {
                         collapsed ? <img src={Logo2} alt='digital-loan' style={{ width: 80 }} /> : <img src={Logo1} alt='digital-loan' style={{ width: 200 }} />
